@@ -1,0 +1,210 @@
+/*
+	CartesianApp -Dispositivos moviles
+*/
+
+@media screen and ( max-width: 800px ){
+	.wrapper{
+		width: 100%;
+		margin: auto;
+		background: none;
+	}
+
+	header nav ul li a{
+		margin: 0 10px;
+		padding: 3px;
+	}
+
+	#lienzo{
+		width: 93%;
+		margin: 50px auto 30px;
+		padding: 0;
+	}
+
+	.Definir{
+		top: 30px;
+		left: 10px;
+		width: 90%;
+	}
+
+	.logo{
+		bottom: 0;
+		top: 70px;
+		left: 20px;
+		position: static;
+		margin: 30px 20px;
+	}
+
+	.logo img{
+		position: static;
+		transform: none;
+	}
+
+	.btn_herramientas img{
+		width: 30px;
+		bottom: 7%;
+	}
+
+	.msg_noVisible, .msg_visible{
+		width: 200px;
+		top: 10px;
+	}
+
+	#msg div:nth-child(2) img{
+		border-radius: 20px;
+		width: 40px
+	}
+
+	#msg_time{
+		left: 10px;
+		top: 100px;
+	}
+
+	#msg_time div:nth-child(1) img{ /* imagen */
+		width: 40px;
+		position: relative;
+		top: 0;
+		left: 0;
+		margin: 0 20px 0 0;
+	}
+
+	#msg_time div:nth-child(2){ /*titulo */
+		font-size: 12px;
+		margin: 10px;
+		position: relative;
+		top: 0;
+	}
+
+	#datos_vec{
+		width: 200px;
+		right: 10px;
+		bottom: 110px;
+	}
+
+	.datos_vec{ /* NO visible */
+		visibility: hidden;
+		transition: all 1s;
+		animation: datosNoVisible 1s;
+	}
+
+		@keyframes datosNoVisible {
+			0%{ bottom: 110px;  opacity: 2; }
+			100%{ bottom: 50px;  opacity: 0 }
+		}
+
+	.Definir input[type=number]{
+		right: 10px;
+		width: 100px;		
+	}
+
+	.datos_vec_visible{ /* Visible */
+		visibility: visible;
+
+		transition: all 1s;
+		animation: datosVisible 1s;
+	}
+
+		@keyframes datosVisible{
+			0%{bottom: 50px; opacity: 0;}
+			100%{bottom: 110px; opacity: 2}
+		}
+
+	.btn_limpiar, .btn_limpiar_visible{
+		right: 100px;
+		bottom: 10px;
+	}
+
+	.btn_limpiar{ /* NO VISIBLE */
+		visibility: hidden;
+
+		transition: all 1s;
+		animation: btnliampiar 1s;
+	}
+
+		@keyframes btnliampiar {
+			0%{ bottom: 10px; opacity: 2; }
+			100%{ bottom: 0; opacity: 0; }
+		}
+
+	.btn_limpiar_visible{ /* VISIBLE */
+		visibility: visible;
+
+		transition: all 1s;
+		animation: btnLimpiar_visible 1s;
+	}
+
+		@keyframes btnLimpiar_visible {
+			0%{ bottom: 0; opacity: 0; }
+			100%{ bottom: 10px; opacity: 2; }
+		}
+
+	.btnRas_si_no, .btnRas_si_noVisible{
+		right: 250px;
+		bottom: 10px;
+	}
+
+	.btnRas_si_no{ /* NO VISIBLE */
+		visibility: hidden;
+
+		transition: all 1s;
+		animation: btnRasNo 1s;
+	}
+
+		@keyframes btnRasNo {
+			0%{ bottom: 10; opacity: 2; }
+			100%{ bottom: 0px; opacity: 0; }
+		}
+
+	.btnRas_si_noVisible{ /* VISIBLE */
+		visibility: visible;
+
+		transition: all 1s;
+		animation: btnRasSi 1s;
+	}	
+
+		@keyframes btnRasSi {
+			0%{ bottom: 0; opacity: 0; }
+			100%{ bottom: 10px; opacity: 2; }
+		}
+
+	#btnCua{
+		right: 175px;
+		bottom: 10px;
+	}
+
+	.btnCua_noVisible{
+		visibility: hidden;
+
+		transition: all 1s;
+		animation: cuaNoVisible 1s;
+	}
+
+		@keyframes cuaNoVisible {
+			0%{ bottom: 10px; opacity: 2; }
+			100%{ bottom: 0px; opacity: 0; }
+		}
+
+
+	.btnCua_visible{
+		visibility: visible;
+
+		transition: all 1s;
+		animation: cuaVisible 1s;
+	}
+
+		@keyframes cuaVisible {
+			0%{ bottom: 0px; opacity: 0; }
+			100%{ bottom: 10px; opacity: 2; }
+		}
+
+	#opciones h1{
+		font-size: 25px;
+	} 
+
+	#opciones h2{
+		font-size: 22px;
+	}
+
+	#opciones a{
+		font-size: 13px; 
+	}
+}

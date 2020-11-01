@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--Creada por Jocsanex5-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartesian App</title>
+    <link rel="stylesheet" href="estilosCA.css">
+    <link rel="stylesheet" href="responsiveCA.css">
+    <link rel="shortcut icon" href="recursos/favicon.png" type="image/x-icon">
+</head>
+<body> 
+		<div id="contenedor_carga">
+			<div id="carga"></div>
+		</div>
+
+	<div class="wrapper">
+		<div id="opciones" class="ops_NV">
+				<button id="quitarOpcion">x</button>
+
+			<div><img src="recursos/imgBlanc.png" width="200px"></div>
+
+				<h1></h1>
+		</div>
+		<header>
+			<nav>
+				<ul>
+					<li title="Ayuda"><a href="#" id="ayuda"><img src="recursos/ayudaHeader.png" width="50px"></a></li>
+					<li title="Referencias"><a href="#" id="referencias"><img src="recursos/referrenciasHeader.png" width="45px"></a></li>
+					<li title="Autor"><a href="#" id="autor"><img src="recursos/autorHeader.png" width="52px"></a></li>
+				</ul>
+			</nav>
+		</header>
+
+			<div class="Definir">
+				<input type="number" id="num"> 
+				<button id="btn_def_num"><img src="recursos/def_punts.png" width="30px"></button>
+			</div>
+
+				<div id="msg_time" class="msgTime_noVisible">
+					<div><img src="recursos/imgBlanc.png" width="80px"></div>
+
+						<div></div>
+				</div>
+
+		<div class="plano">
+        	<canvas width="500px" height="500px" id="lienzo"></canvas>
+    	</div>
+
+		<div class="Dat">
+			<div class="datos_vec" id="datos_vec">
+				<span class="datos-graf">
+					<p>1er punto</p>
+						<input type="number" id="x1" placeholder="x1"><span>,</span><input type="number" id="y1" placeholder="y1">
+	
+						<br>
+					<p>2do punto</p>
+						<input type="number" id="x2" placeholder="x2"><span>,</span><input type="number" id="y2" placeholder="y2">
+	
+						<br>
+					<button id="btn_graficar"><img src="recursos/graficar.png" width="30px" height="20px"></button>
+				</span>
+			</div>
+		</div>
+		
+		<div>
+			<button class="btn_herramientas" id="btn_herramientas">
+				<img src="recursos/herramienta.png" width="30px">
+			</button>
+		</div>
+
+			<button class="btn_limpiar" id="btn_limpiar" title="limpiar">
+				<img src="recursos/limpiar.png" width="30px">
+			</button>
+
+				<button class="btnRas_si_no" id="btnRas_si_no">
+					<img src="recursos/img_btn_rastroSI.png" width="30px" id="img_btnRastro" title="Rastro de puntos">
+				</button>
+
+			<button id="btnCua" class="btnCua_noVisible">
+				<img src="recursos/btn_cuadrantes.png" width="30px" title="Cuadrantes del plano carteasiano">
+			</button>
+
+		<div class="logo"><img src="recursos/logo.png" width="200px" id="logo"></div>
+
+			<div id="msg" class="msg_noVisible">
+				<button id="btnNo">X</button>
+
+					<div><img src="recursos/imgBlanc.png" width="100px"></div>
+
+						<div></div>
+
+				<div></div>
+			</div>
+		
+	</div>
+
+    <script src="mainCA.js"></script>
+</body>
+</html>

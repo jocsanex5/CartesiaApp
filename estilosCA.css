@@ -1,0 +1,549 @@
+/*
+	Estlos de Cartesian-App
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+	text-align: center;
+}
+
+.wrapper{
+	width: 90%;
+	margin: 10px 5%;
+	background-image: url(recursos/fondo4.png);
+}
+
+input[type=text]{
+	text-align: center; 
+	margin: 10px;
+}
+
+button{
+	padding: 10px; margin: 5px;
+}
+
+header{
+	background: rgb(70, 226, 206);
+}
+
+header nav ul{
+	list-style: none;
+}
+
+header nav ul li{
+	display: inline-block;
+}
+
+header nav ul li a{
+	padding: 5;
+	display: block;
+	text-decoration: none;
+	margin: 0;
+
+	font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+header nav ul li a:hover{
+	background: rgb(48, 151, 138);
+}
+
+header nav ul li a img{
+	border-radius: 10px;
+	margin: 0 20px;
+	position: relative;
+	top: 2px;
+}
+
+#opciones{
+	background: #fff;
+	border: 3px solid #000;
+	height: 90%;
+	padding: 30px;
+	width: 85%;
+	position: fixed;
+	transition: all 1s;
+	z-index: 10000;
+	overflow: auto;
+
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.ops_NV{
+	visibility: hidden;
+	transition: all 1s;
+	animation: opsNV 1s;
+}
+
+	@keyframes opsNV{
+		0%{ opacity: 2; }
+		100%{ opacity: 0; }
+	}
+
+.ops_V{
+	visibility: visible;
+	transition: all 1s;
+	animation: opsV 1s;
+}
+
+	@keyframes opsV{
+		0%{ opacity: 0; }
+		100%{ opacity: 2; }
+	}
+
+#quitarOpcion{
+	background: none;
+	float: right;
+	position: relative;
+	right: 10px;
+	top: 10px;
+	padding: 10px;
+	font-size: 16px;
+}
+
+#opciones div{
+	border-radius: 10px;
+}
+
+#opciones div:nth-child(2) img{
+	position: relative;
+	left: 20px;
+	box-shadow: 2px 2px 5px 2px rgb(15, 101, 104);
+	margin: 10px;
+	border-radius: 30px;
+}
+
+#opciones h1{
+	font-size: 30px;
+	font-weight: bold;
+	margin: 20px;
+	background-color: rgb(255, 145, 0);
+} 
+
+#opciones h2{
+	margin: 15px;
+	color: rgb(70, 226, 206);
+}
+
+#opciones p{
+	margin: 10px;
+}
+
+#opciones img{
+	margin: 10px;
+	box-shadow: 2px 2px 5px 2px rgb(15, 101, 104);
+}
+
+#opciones div button{
+	background: none;
+	padding: 10px;
+	margin: 30px 10px;
+	font-family: cursive;
+	border-radius: 10px;
+	border: 2px solid rgb(0, 247, 255); 
+}
+
+#opciones a{
+	width: 20px;
+	color: orange;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.plano{
+	background: none;
+	position: static;
+}
+
+#lienzo{
+	margin: 10px; 
+	background: #fff; 
+	border-radius: 30px;
+	border: 2px solid rgb(31, 48, 51);
+	padding: 5px;
+}
+
+.Definir{
+	background: #fff;
+	width: 20%;
+	position: relative;
+	top: 50px;
+	padding: 5px;
+	margin: 0;
+	border-radius: 20px;
+	border: 2px solid rgb(253, 255, 255);
+	box-shadow: 2px 2px 5px 2px rgb(15, 101, 104);
+}
+
+.Definir input[type=number]{
+	padding: 10px;
+	text-align: center;
+	width: 50px;
+	position: relative;
+	bottom: 8px;
+}
+
+.Definir button{
+	background: none;
+	border-radius: 10px;
+	border: 2px solid rgb(255, 186, 11);
+	transition: all 1s;
+	padding: 4px;
+}
+
+.Definir button img{
+	width: 35px;
+	margin: 0px;
+}
+
+.btn_herramientas{
+	position: fixed;
+	bottom: 5%;
+	right: 6%;
+	padding: 30px;
+	border-radius: 100%;
+	background-color: #fff;
+	padding: 12px;
+	border: 3px solid rgb(70, 226, 206);
+
+	transition: all 1s;
+}
+
+.btn_herramientas img{
+	width: 55px;
+}
+
+.Dat{ background: #fff; }
+
+.datos_vec, .datos_vec_visible{
+	background: #fff;
+	width: 20%;
+	padding: 5px;
+	position: relative;
+	bottom: 150px;
+	right: 50px;
+	position: fixed;
+	border: 2px solid rgb(253, 255, 255);
+	border-radius: 35px 35px 0px 35px;
+	box-shadow: 2px 2px 5px 2px rgb(15, 101, 104);
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.datos_vec p, .datos_vec_visible p{
+	margin: 5px;
+}
+
+.datos_vec{ /* NO visible */
+	visibility: hidden;
+	transition: all 1s;
+	animation: datosNoVisible 1s;
+}
+
+	@keyframes datosNoVisible {
+		0%{ bottom: 150px; width: 20%; opacity: 2; }
+		100%{ bottom: 50px; width: 15%; opacity: 0 }
+	}
+
+.datos_vec_visible{ /* Visible */
+	visibility: visible;
+
+	transition: all 1s;
+	animation: datosVisible 1s;
+}
+
+	@keyframes datosVisible{
+		0%{bottom: 50px; width: 15%; opacity: 0;}
+		100%{bottom: 150px; width: 20%; opacity: 2}
+	}
+
+
+.datos-graf input[type=number]{
+	padding: 5px;
+	width: 30px;
+	margin: 5px;
+	border-radius: 10px;
+	border: none;
+	box-shadow: 0.5px 0.5px 3px 0.5px rgb(45, 53, 53);
+}
+
+.datos-graf button{
+	background: none;
+	border-radius: 10px;
+	border: 2px solid rgb(255, 186, 11);
+}
+
+.btn_limpiar, .btn_limpiar_visible{
+	background: rgb(253, 255, 255);
+	position: fixed;
+	right: 190px;
+	bottom: 20px;
+	border: none;
+	border-radius: 15px 15px 0px 15px;
+	box-shadow: 2px 2px 5px 2px rgb(15, 101, 104);
+
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn_limpiar{ /* NO VISIBLE */
+	visibility: hidden;
+
+	transition: all 1s;
+	animation: btnliampiar 1s;
+}
+
+	@keyframes btnliampiar {
+		0%{ bottom: 20px; opacity: 2; }
+		100%{ bottom: 0; opacity: 0; }
+	}
+
+.btn_limpiar_visible{ /* VISIBLE */
+	visibility: visible;
+
+	transition: all 1s;
+	animation: btnLimpiar_visible 1s;
+}
+
+	@keyframes btnLimpiar_visible {
+		0%{ bottom: 0; opacity: 0; }
+		100%{ bottom: 20px; opacity: 2; }
+	}
+
+.btnRas_si_no, .btnRas_si_noVisible{
+	background: rgb(253, 255, 255);
+	position: fixed;
+	right: 260px;
+	bottom: 20px;
+	border: none;
+	border-radius: 15px 15px 0px 15px;
+	box-shadow: 2px 2px 5px 2px rgb(15, 101, 104);
+
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.btnRas_si_no{ /* NO VISIBLE */
+	visibility: hidden;
+
+	transition: all 1s;
+	animation: btnRasNo 1s;
+}
+
+	@keyframes btnRasNo {
+		0%{ bottom: 20; right: 260px; opacity: 2; }
+		100%{ bottom: 0px; right: 190px; opacity: 0; }
+	}
+
+.btnRas_si_noVisible{ /* VISIBLE */
+	visibility: visible;
+
+	transition: all 1s;
+	animation: btnRasSi 1s;
+}	
+
+	@keyframes btnRasSi {
+		0%{ bottom: 0; right: 190px; opacity: 0; }
+		100%{ bottom: 20px; right: 260px; opacity: 2; }
+	}
+
+.logo{
+	position: relative;
+	float: left;
+	bottom: 100px;
+}
+
+.logo img{
+	transform: rotate(30deg);
+	border-radius: 20px;
+	box-shadow: 2px 2px 4px 4px rgb(151, 151, 151);
+}
+
+/*
+	carga
+*/
+
+*,*:after, *before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#contenedor_carga{
+	background: #fff;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	transition: all 1s;
+	z-index: 10000;
+}
+
+#contenedor_carga #carga{
+	border: 15px solid #ccc;
+	border-top-color: rgb(70, 226, 206);
+	border-top-style: groove;
+	height: 100px;
+	width: 100px; 
+	border-radius: 100%;
+
+	position: absolute;;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+
+	animation: girar 1.5s linear infinite;
+}
+
+	@keyframes girar{
+		0%{ transform: rotate(0%);} 
+		100%{ transform: rotate(360deg);} 
+	}
+
+.msg_noVisible, .msg_visible{
+	width: 25%;
+	position: fixed;
+	top: 100px;
+	right: 20px;
+	padding: 10px;
+	border-radius: 20px;
+	background: #fff;
+	border: 2px solid #000;
+	border-style: groove;
+	box-shadow: 2px 2px 5px 2px rgb(15, 101, 104);
+
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.msg_noVisible{
+	visibility: hidden;
+
+	transition: all 1s;
+	animation: noVisible 1s;
+}
+
+@keyframes noVisible {
+	0%{ opacity: 2; }
+	100%{ opacity: 0 }
+}
+
+.msg_visible{
+	visibility: visible;
+
+	transition: all 1s;
+	animation: visible 1s;
+}
+
+@keyframes visible {
+	0%{ opacity: 0; }
+	100%{ opacity: 2;};
+}
+
+#msg div:nth-child(2) img{
+	border-radius: 20px;
+	width: 80px
+}
+
+#msg div:nth-child(3){ /* Tittle */
+	font-size: 20px;
+	margin: 10px;
+}
+
+#msg div:nth-child(4){ /* Content */
+	font-size: 16px;
+	margin: 10px; 
+}
+
+#msg button{ 		/* button */
+	float: left;
+	margin: 0 -40px 0 0;
+	background: none;
+	border-radius: 20px;
+	border: 2px solid rgb(255, 20, 177);
+}
+
+/*--------------------------------*/
+.msgTime_noVisible{
+	visibility: hidden;
+
+	transition: all 1s;
+	animation: noVisible 1s;
+}
+
+.msgTime_Visible{
+	visibility: visible;
+
+	transition: all 1s;
+	animation: visible 1s;
+}
+
+#msg_time{
+	width: 25%;
+	position: fixed;
+	top: 300px;
+	left: 25px;
+	padding: 10px;
+	border-radius: 20px;
+	background: #fff;
+	border-style: groove;
+
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#msg_time div:nth-child(1) img{ /* imagen */
+	float: left;
+	position: relative;
+	top: 0;
+	left: 20px;
+	margin: 0 20px 0 0;
+}
+
+#msg_time div:nth-child(2){ /*titulo */
+	font-size: 20px;
+	margin: 10px;
+	position: relative;
+	top: 5px;
+}
+
+/* btn Cuadrantes */
+#btnCua{
+	background: rgb(253, 255, 255);
+	position: fixed;
+	right: 190px;
+	bottom: 80px;
+	border: none;
+	border-radius: 15px 15px 0px 15px;
+	box-shadow: 2px 2px 5px 2px rgb(15, 101, 104);
+
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.btnCua_noVisible{
+	visibility: hidden;
+
+	transition: all 1s;
+	animation: cuaNoVisible 1s;
+}
+
+	@keyframes cuaNoVisible {
+		0%{ bottom: 80px; opacity: 2; }
+		100%{ bottom: 0px; opacity: 0; }
+	}
+
+
+.btnCua_visible{
+	visibility: visible;
+
+	transition: all 1s;
+	animation: cuaVisible 1s;
+}
+
+	@keyframes cuaVisible {
+		0%{ bottom: 0px; opacity: 0; }
+		100%{ bottom: 80px; opacity: 2; }
+	}
